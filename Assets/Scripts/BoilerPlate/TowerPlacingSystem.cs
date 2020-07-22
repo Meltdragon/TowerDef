@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class TowerPlacingSystem : Singleton<TowerPlacingSystem>
@@ -18,17 +19,32 @@ public class TowerPlacingSystem : Singleton<TowerPlacingSystem>
     [Button]
     private void AddTowerPlace()
     {
+        int childs = transform.childCount;
+
+        if (index <= childs)
+        {
+            index = childs + 1;
+        }
+
         GameObject tower = Instantiate(towerPlace, transform.position, Quaternion.identity);
         tower.name = "TowerPlace" + index;
         tower.transform.parent = this.gameObject.transform;
         DrawIcon(tower, 1);
         index++;
+
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+
     }
 
     [Button]
     private void RemoveTowerPlace()
     {
         int childs = transform.childCount;
+
+        if(index <= childs + 1 && index != 1)
+        {
+            index = childs + 1;
+        }
 
         for (int i = 0; i < childs; i++)
         {
@@ -38,6 +54,8 @@ public class TowerPlacingSystem : Singleton<TowerPlacingSystem>
                 index--;
             }
         }
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+
     }
 
     private void DrawIcon(GameObject gameObject, int idx)
