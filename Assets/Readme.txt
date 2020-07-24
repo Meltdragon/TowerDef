@@ -36,3 +36,10 @@ BuildUI:
 Tower List can hold all the towers you wish for that level. The List is holding scriptical object from type TowerInformation.
 The Tower Panel needs the prefab TowerPanel(should be selected). This panel can be modified or replaced with another canvas object.
 The xOffSet is for the spacing between the panels.
+
+TowerInformation:
+Tower Name => name of the tower.
+Tower: Tower Prefab.
+Tower Image: here you can place an image of the tower.
+Build cost: how much the tower should cost.
+Tower Information: Here you can write some information for the player.
