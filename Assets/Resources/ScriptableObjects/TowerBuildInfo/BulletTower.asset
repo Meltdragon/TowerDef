@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a97cd72c12bf142baa5856cda95ee7, type: 3}
+  m_Name: BulletTower
+  m_EditorClassIdentifier: 
+  towerName: Bullet Tower
+  tower: {fileID: 3402565877522446940, guid: c615515714911ef49adb84ae3ef9e071, type: 3}
+  towerImage: {fileID: 0}
+  buildCost: 0
+  towerInformation: Here stand your infoormation!

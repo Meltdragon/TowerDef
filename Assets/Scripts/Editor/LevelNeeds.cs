@@ -10,6 +10,7 @@ public class LevelNeeds : Editor
         PrefabUtility.InstantiatePrefab(Resources.Load("Level/SpawnSystem"));
         PrefabUtility.InstantiatePrefab(Resources.Load("Level/WayPointSystem"));
         PrefabUtility.InstantiatePrefab(Resources.Load("Level/TowerPlaceingSystem"));
+        PrefabUtility.InstantiatePrefab(Resources.Load("UI/BuildUI"));
 
         EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());  
     }

@@ -33,7 +33,6 @@ public class TowerPlacingSystem : Singleton<TowerPlacingSystem>
         index++;
 
         EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
-
     }
 
     [Button]
