@@ -23,6 +23,7 @@ public abstract class Enemy : MonoBehaviour, iDamageAble
     {
         SetStats();
         GetWayPoints();
+        EnemyStorageHandler.AddEnemy(this.gameObject);
     }
 
     public void DamageTaken(int damage)
@@ -36,6 +37,7 @@ public abstract class Enemy : MonoBehaviour, iDamageAble
 
     public void Death()
     {
+        EnemyStorageHandler.RemoveEnemy(this.gameObject);
         Destroy(gameObject);
     }
 

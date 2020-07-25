@@ -54,7 +54,6 @@ public class TowerPlacingSystem : Singleton<TowerPlacingSystem>
             }
         }
         EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
-
     }
 
     private void DrawIcon(GameObject gameObject, int idx)

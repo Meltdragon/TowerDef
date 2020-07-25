@@ -9,18 +9,12 @@ public class SpawningSystem : Singleton<SpawningSystem>
 
     private bool spawning = false;
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if (!spawning)
         {
             spawning = true;
             StartCoroutine("SpawnWaiting");
-
         }
     }
 
@@ -36,7 +30,5 @@ public class SpawningSystem : Singleton<SpawningSystem>
                 yield return wait;
             }
         }
-
-
     }
 }

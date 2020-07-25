@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e60c7feec69ee443a16d9946a4784f9, type: 3}
-  m_Name: test
+  m_Script: {fileID: 11500000, guid: 9c056aed2dcc75843a3863c0407e958f, type: 3}
+  m_Name: NormalBullet
   m_EditorClassIdentifier: 
-  health: 10
-  movementSpeed: 5
