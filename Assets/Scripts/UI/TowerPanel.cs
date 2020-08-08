@@ -9,11 +9,15 @@ public class TowerPanel : MonoBehaviour
 
     public void Down()
     {
-        GameObject tower = Instantiate(this.tower.GetTowerPrefab(),towerPlace.position,Quaternion.identity) ;
-        tower.transform.parent = towerPlace;
-        towerPlace.gameObject.GetComponent<TowerPlace>().TowerIsBuild();
-        BuildUI.ChangeBuildBool();
-        BuildUI.DestroyUI();
+        if (MoneyHandler.Money >= tower.GetTowerCost())
+        {
+            MoneyHandler.RemoveMoney(this.tower.GetTowerCost());
+            GameObject tower = Instantiate(this.tower.GetTowerPrefab(), towerPlace.position, Quaternion.identity);
+            tower.transform.parent = towerPlace;
+            towerPlace.gameObject.GetComponent<TowerPlace>().TowerIsBuild();
+            BuildUI.ChangeBuildBool();
+            BuildUI.DestroyUI();
+        }
     }
 
     public void GetTheInformation(TowerInformation tower, Transform towerPlace)

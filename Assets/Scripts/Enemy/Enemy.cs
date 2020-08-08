@@ -31,6 +31,7 @@ public abstract class Enemy : MonoBehaviour, iDamageAble
         health -= damage;
         if(health <= 0)
         {
+            AddMoney();
             Death();
         }
     }
@@ -55,5 +56,10 @@ public abstract class Enemy : MonoBehaviour, iDamageAble
     public void RemoveFromList()
     {
         wayPoints.Remove(wayPoints[0]);
+    }
+
+    private void AddMoney()
+    {
+        MoneyHandler.AddMoney(stats.money);
     }
 }

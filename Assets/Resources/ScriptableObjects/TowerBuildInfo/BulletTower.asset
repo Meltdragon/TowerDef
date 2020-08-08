@@ -15,5 +15,5 @@ MonoBehaviour:
   towerName: Bullet Tower
   tower: {fileID: 3402565877522446940, guid: c615515714911ef49adb84ae3ef9e071, type: 3}
   towerImage: {fileID: 0}
-  buildCost: 0
+  buildCost: 10
   towerInformation: Here stand your information!
